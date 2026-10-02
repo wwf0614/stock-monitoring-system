@@ -1,0 +1,6 @@
+requests>=2.25.0
+# 量化数据层（akshare_provider / history_db / etl_backfill）依赖。
+# akshare 必须锁死版本：它的接口封装随上游改版频繁漂移，升级等于换数据源。
+akshare==1.18.88
+pandas>=2.0,<3.0
+numpy>=1.24

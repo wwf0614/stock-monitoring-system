@@ -1,0 +1,20 @@
+{
+  "email": {
+    "enabled": false,
+    "smtp_host": "smtp.qq.com",
+    "smtp_port": 465,
+    "user": "",
+    "password": "",
+    "to": ""
+  },
+  "webhook": {
+    "enabled": false,
+    "url": ""
+  },
+  "serverchan": {
+    "enabled": false,
+    "key": ""
+  },
+  "api_token": "改成你自己的访问口令",
+  "data_source": "eastmoney"
+}

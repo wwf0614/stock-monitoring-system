@@ -1,0 +1,28 @@
+# Python
+__pycache__/
+*.py[cod]
+
+# 运行时状态与积累数据（本地保留，不入库）
+history.db
+history.db.*
+*.json.bak
+alerts.json
+funds.json
+fund_history.json
+forecast_history.json
+rotation_state.json
+state.json
+
+# 本地配置（含访问口令，用 config.example.json 作模板）
+config.json
+
+# 日志
+*.log
+
+# AI 助手工作目录（含本地会话记录）
+.workbuddy/
+.learnings/
+
+# 系统文件
+.DS_Store
+Thumbs.db

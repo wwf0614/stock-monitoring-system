@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<title>A股行情 & CPO/半导体趋势分析 - 2026-08-17</title>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<style>
+  :root{
+    --bg:#f5f7fa; --card:#ffffff; --ink:#1f2937; --sub:#6b7280;
+    --line:#e5e7eb; --blue:#2563eb; --indigo:#4f46e5; --orange:#ea580c;
+    --purple:#7c3aed; --green:#16a34a; --red:#dc2626;
+  }
+  *{box-sizing:border-box;}
+  body{font-family:-apple-system,"PingFang SC","Microsoft YaHei",sans-serif;max-width:1080px;margin:0 auto;padding:24px;background:var(--bg);color:var(--ink);}
+  h1{font-size:26px;margin:0 0 4px;}
+  .meta{color:var(--sub);font-size:13px;margin-bottom:20px;}
+  .overview{background:linear-gradient(135deg,#1e3a8a,#2563eb);color:#fff;padding:22px 26px;border-radius:16px;margin-bottom:22px;}
+  .overview h2{margin:0 0 8px;font-size:18px;}
+  .overview p{margin:4px 0;line-height:1.7;font-size:14px;}
+  .cards{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:22px;}
+  .dcard{padding:20px;border-radius:14px;color:#fff;position:relative;overflow:hidden;}
+  .dcard.semi{background:linear-gradient(135deg,#1d4ed8,#4f46e5);}
+  .dcard.cpo{background:linear-gradient(135deg,#7c3aed,#db2777);}
+  .dcard h3{margin:0 0 6px;font-size:20px;}
+  .badge{display:inline-block;background:rgba(255,255,255,.22);padding:4px 10px;border-radius:999px;font-size:13px;margin-bottom:10px;}
+  .grid4{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:12px;}
+  .grid4 div{background:rgba(255,255,255,.16);padding:10px;border-radius:8px;text-align:center;}
+  .grid4 b{display:block;font-size:18px;}
+  .grid4 span{font-size:11px;opacity:.85;}
+  .chart-card{background:var(--card);padding:22px;border-radius:12px;margin-bottom:22px;box-shadow:0 1px 3px rgba(0,0,0,.06);}
+  .chart-card h2{margin:0 0 4px;font-size:17px;}
+  .chart-card .hint{color:var(--sub);font-size:12px;margin:0 0 14px;}
+  .two{display:grid;grid-template-columns:1fr 1fr;gap:18px;}
+  table{width:100%;border-collapse:collapse;font-size:13px;margin-top:6px;}
+  th,td{border:1px solid var(--line);padding:9px 10px;text-align:left;}
+  th{background:#f1f5f9;}
+  .fund-box{background:#fff;border:1px solid var(--line);border-radius:12px;padding:18px;margin-bottom:22px;}
+  .detail{background:#fff;border:1px solid var(--line);border-radius:12px;padding:20px;margin-bottom:22px;line-height:1.8;font-size:14px;}
+  .detail h2{margin-top:0;font-size:17px;}
+  .detail ul{margin:6px 0 14px;padding-left:20px;}
+  .detail li{margin:4px 0;}
+  details{border:1px solid var(--line);border-radius:8px;padding:10px 14px;margin:8px 0;background:#fafafa;}
+  summary{cursor:pointer;font-weight:600;}
+  .tag{display:inline-block;padding:2px 8px;border-radius:6px;font-size:12px;margin-right:4px;}
+  .t-up{background:#fee2e2;color:#b91c1c;}
+  .t-down{background:#dcfce7;color:#15803d;}
+  .disclaimer{color:var(--sub);font-size:12px;padding:16px;border-top:1px solid var(--line);margin-top:22px;line-height:1.7;}
+</style>
+</head>
+<body>
+
+<h1>A股行情 & CPO / 半导体趋势分析</h1>
+<div class="meta">分析日期：2026-08-17 ｜ 数据来源：公开行情、券商研报、上市公司公告（经 Web 检索汇总）｜ 适配约束：仅场外开放式基金</div>
+
+<div class="overview">
+  <h2>📌 市场总览：成长占优的结构性修复市</h2>
+  <p>① <b>指数</b>：8/17 沪指 ≈3982（+1.40%，卡在 3900–4000 关口）、沪深300 ≈4741（8月 +3.33%）、科创50 ≈1788（8月 +9.30%）、中证1000 +12.54%——<b>小盘/科创成长显著强于蓝筹</b>。</p>
+  <p>② <b>风格</b>：成长科技领涨、周期防御落后；医药生物/电子/通信涨幅居前。中报季“业绩为王”，纯题材退潮，资金只买有订单、有兑现的硬核赛道。</p>
+  <p>③ <b>情绪</b>：券商集体唱多“金秋行情”，但量价背离（缩量涨、放量跌）提示 4000 点套牢盘前仍有反复；机构建议重结构、轻指数。</p>
+  <p>④ <b>结论</b>：非单边牛/熊，是<b>震荡上行中的结构市</b>。CPO 与半导体是确定性最高的两条科技主线，但均已累积较大涨幅、估值不便宜——<b>适合分批/定投，不适合追高</b>。</p>
+</div>
+
+<div class="cards">
+  <div class="dcard semi">
+    <span class="badge">半导体 · 分批建仓（HOLD偏多）</span>
+    <h3>半导体 SEMI</h3>
+    <p style="font-size:13px;opacity:.9;margin:0 0 4px;">三重共振：周期上行 + AI 成长 + 国产替代</p>
+    <div class="grid4">
+      <div><b>高</b><span>景气确定性</span></div>
+      <div><b>中高</b><span>风险等级</span></div>
+      <div><b>定投</b><span>建议方式</span></div>
+      <div><b>≤20%</b><span>单行业上限</span></div>
+    </div>
+  </div>
+  <div class="dcard cpo">
+    <span class="badge">CPO · 积极但控仓（HOLD偏多）</span>
+    <h3>CPO / 光通信</h3>
+    <p style="font-size:13px;opacity:.9;margin:0 0 4px;">2026 量产元年：英伟达交换机量产、1.6T 供需缺口至 2028</p>
+    <div class="grid4">
+      <div><b>很高</b><span>产业趋势</span></div>
+      <div><b>高</b><span>波动风险</span></div>
+      <div><b>逢调</b><span>建议方式</span></div>
+      <div><b>≤15%</b><span>单行业上限</span></div>
+    </div>
+  </div>
+</div>
+
+<div class="chart-card">
+  <h2>📊 五维对比雷达图</h2>
+  <p class="hint">维度：行业景气 / 业绩兑现 / 政策支持 / 资金热度 / 估值风险（越外越高；估值风险轴“越高=越危险”）</p>
+  <canvas id="radarChart" height="320"></canvas>
+</div>
+
+<div class="chart-card">
+  <h2>📈 8月主要指数走势（真实行情）</h2>
+  <p class="hint">数据区间 2026-08-03 ~ 08-17，前复权收盘价。科创50/中证1000 明显强于沪深300，印证成长占优。</p>
+  <canvas id="lineChart" height="300"></canvas>
+</div>
+
+<div class="two">
+  <div class="chart-card">
+    <h2>⚖️ 半导体 · 多空论点权重</h2>
+    <p class="hint">权重 1–10（研究主管视角）：多头 vs 空头核心论据强度</p>
+    <canvas id="barSemi" height="280"></canvas>
+  </div>
+  <div class="chart-card">
+    <h2>⚖️ CPO · 多空论点权重</h2>
+    <p class="hint">权重 1–10：CPO 多头逻辑更集中、空头主要为高位与依赖风险</p>
+    <canvas id="barCpo" height="280"></canvas>
+  </div>
+</div>
+
+<div class="chart-card">
+  <h2>📐 风险评估三角（激进 / 中性 / 保守）</h2>
+  <p class="hint">分数越高代表该视角越“支持配置”。CPO 激进视角最高但保守视角最低，反映高弹性高波动；半导体更均衡。</p>
+  <canvas id="riskChart" height="300"></canvas>
+</div>
+
+<div class="fund-box">
+  <h2 style="margin-top:0;">💡 你能买的场外基金（具体标的 + 代码）</h2>
+  <p style="color:var(--sub);font-size:13px;margin-top:0;">注：你无法买入上市 ETF/LOF，下表均为<b>场外开放式基金（ETF 联接 / 指数基金）</b>，在支付宝/天天基金/券商 App 搜代码即可申购。风险等级多为 R4（中高），适合风险承受 C4 及以上。</p>
+  <table>
+    <tr><th>方向</th><th>场外基金（可买）</th><th>代码</th><th>赛道纯度</th><th>适合</th></tr>
+    <tr><td>半导体（宽）</td><td>国联安中证全指半导体ETF联接 A</td><td>007300</td><td>全指半导体，弹性强</td><td>长期定投</td></tr>
+    <tr><td>半导体（芯片）</td><td>国泰CES半导体芯片ETF联接 A</td><td>008281</td><td>聚焦芯片设计</td><td>细分偏好</td></tr>
+    <tr><td>半导体（全链）</td><td>华夏国证半导体芯片ETF联接 A</td><td>008887</td><td>设计/制造/封测全链</td><td>均衡配置</td></tr>
+    <tr><td>CPO/光通信</td><td>富国中证通信设备主题ETF联接 A</td><td>021933</td><td>光模块龙头占 45.5%，CPO 高纯</td><td>CPO 主线</td></tr>
+    <tr><td>CPO/光通信</td><td>华夏中证5G通信ETF联接 A</td><td>008086</td><td>CPO 概念股权重超 74%</td><td>CPO 主线</td></tr>
+    <tr><td>CPO+AI</td><td>富国创业板人工智能ETF联接 A</td><td>024662</td><td>光模块 38.65% + 存储 18.82%</td><td>弹性卫星仓</td></tr>
+  </table>
+  <p style="font-size:12px;color:var(--sub);margin-bottom:0;">A 类适合持有 ≥1–2 年（无销售服务费、收申购费）；C 类适合短持（免申购费、收销售服务费）。半导体/CPO 波动大，<b>建议用定投或分批摊薄成本</b>，单一行业仓位建议 ≤15–20%。</p>
+</div>
+
+<div class="detail">
+  <h2>📝 详细分析</h2>
+
+  <details open>
+    <summary>一、市场行情（8月）</summary>
+    <ul>
+      <li><span class="tag t-up">修复</span>7月主跌后，8月放量反弹：沪指站上 3800→3900，8/17 逼近 4000；科创50、中证1000 领涨，成长风格占优。</li>
+      <li><span class="tag t-down">背离</span>量价背离（缩量涨、放量跌）+ 4000 点历史套牢盘，冲关需巨量配合，短线震荡反复难免。</li>
+      <li><span class="tag t-up">结构</span>四条主流赛道：①AI硬件/半导体（存储、光模块、先进封装、设备）②算力电网/储能/特高压 ③黄金贵金属 ④创新药。白酒/消费承压（茅台中报净利下滑、汇金证金退出十大股东）。</li>
+      <li><span class="tag t-down">风险</span>高位赛道短期拥挤、易暴涨暴跌；中报暴雷杀估值；外围美股科技波动传导。</li>
+    </ul>
+  </details>
+
+  <details open>
+    <summary>二、CPO（共封装光学）未来趋势</summary>
+    <ul>
+      <li><span class="tag t-up">量产元年</span>2026 年英伟达 Spectrum-X CPO 交换机全面量产，博通 Bailly CPO 小量出货，行业正式从概念走向量产；台积电 COUPE 硅光平台量产解决核心封装难题。</li>
+      <li><span class="tag t-up">强需求</span>1.6T 光模块 2026 全球有效供给仅覆盖 60% 订单，200G EML/磷化铟扩产周期 2–3 年，供需缺口延续至 2028；英伟达长协锁产能至 2028 年底。</li>
+      <li><span class="tag t-up">大空间</span>2026 全球 CPO 市场 ≈20 亿美元（同比 +400%），中国破 100 亿元（+500%）；2030 渗透率有望从 3–5% 升至 20–35%；全球 CPO 独立市场 2030 或破 100 亿美元。</li>
+      <li><span class="tag t-up">政策</span>工信部《普惠算力专项行动》：新建智算中心 CPO 适配≥60%、东数西算国产 CPO 采购≥70%；大基金三期 216 亿定向支持硅光/CPO。</li>
+      <li><span class="tag t-down">注意</span>已大涨、估值偏高，短线易受“利好兑现+获利盘”震荡；技术路线长期或被 OIO 迭代；对英伟达/云厂商订单依赖度高。</li>
+    </ul>
+  </details>
+
+  <details open>
+    <summary>三、半导体未来趋势</summary>
+    <ul>
+      <li><span class="tag t-up">超级周期</span>全球半导体 2026 规模预计 1.29–1.51 万亿美元（同比 +52.8%），SIA 一季度销售额 2985 亿美元创历史季度新高；由 AI 算力定义，脱离传统消费电子周期。</li>
+      <li><span class="tag t-up">国产替代</span>设备国产化率从 2020 年 15% 升至 2026 年 30–35%（刻蚀/清洗环节破 40–50%）；大基金三期精准投入“卡脖子”环节；北方华创、中微订单排至 2027。</li>
+      <li><span class="tag t-up">存储涨价</span>DRAM 合约价一季度涨 90–95%、NAND 涨 55–60%，十年罕见超级周期；长江存储 294 层 NAND 量产、良率破 90%。</li>
+      <li><span class="tag t-down">高估值</span>中证半导体产业指数近一年涨幅曾达 144.91%，静态估值处历史高位，交易拥挤；短期波动大，机构普遍建议<b>定投</b>而非追高。</li>
+    </ul>
+  </details>
+
+  <details>
+    <summary>四、操作建议（适配你的场外基金约束）</summary>
+    <ul>
+      <li><b>总仓</b>：当前震荡市，建议权益仓 30–50%，其中科技（半导体+CPO）合计 ≤30–35%，单一行业 ≤15–20%。</li>
+      <li><b>方式</b>：以<b>定投/分批</b>为主，回踩低吸、不追连续大阳线；高位赛道用“卫星仓”观察，等放量站稳再加。</li>
+      <li><b>哑铃策略</b>：一端 CPO/半导体（进攻），另一端可配红利低波/纯债（防守，如红利低波ETF联接 A 021482、货币基金），平衡波动。</li>
+      <li><b>节奏</b>：以 1–3 个月中期趋势为锚——中期上行板块（AI硬件/半导体）逢调加仓，当日反弹不追高。</li>
+    </ul>
+  </details>
+
+  <p style="font-size:13px;color:var(--sub);"><b>关键催化剂</b>：英伟达/博通 CPO 交付节奏、1.6T 光模块出货、大基金三期落地、半导体设备中报、美联储降息预期、4000 点放量突破与否。</p>
+  <p style="font-size:13px;color:var(--sub);"><b>关键风险</b>：高位赛道拥挤回撤、中报暴雷、外围科技波动、地缘/关税、国内政策落地不及预期。</p>
+</div>
+
+<div class="disclaimer">
+  ⚠️ 本分析由 AI 基于公开信息（行情数据、券商研报、上市公司公告）整理生成，<b>仅供参考，不构成任何投资建议或个股推荐</b>。基金有风险，投资需谨慎；过往业绩不预示未来表现。请结合自身风险承受能力，详阅基金合同等法律文件后独立决策。
+</div>
+
+<script>
+// 雷达图
+new Chart(document.getElementById('radarChart'), {
+  type:'radar',
+  data:{
+    labels:['行业景气','业绩兑现','政策支持','资金热度','估值风险(高=危)'],
+    datasets:[
+      {label:'半导体',data:[9,8,9,8,7],fill:true,backgroundColor:'rgba(37,99,235,.15)',borderColor:'#2563eb',pointBackgroundColor:'#2563eb'},
+      {label:'CPO/光通信',data:[9.5,8.5,8.5,9,8],fill:true,backgroundColor:'rgba(124,58,237,.15)',borderColor:'#7c3aed',pointBackgroundColor:'#7c3aed'}
+    ]
+  },
+  options:{scales:{r:{min:0,max:10,ticks:{stepSize:2}}},plugins:{legend:{position:'bottom'}}}
+});
+
+// 指数走势
+new Chart(document.getElementById('lineChart'), {
+  type:'line',
+  data:{
+    labels:['08-03','08-04','08-05','08-06','08-07','08-10','08-11','08-12','08-13','08-14','08-17'],
+    datasets:[
+      {label:'沪深300',data:[4543.18,4600.93,4658.15,4651.31,4694.44,4702.02,4663.79,4690.92,4663.95,4665.88,4740.48],borderColor:'#2563eb',tension:.3,pointRadius:3},
+      {label:'科创50',data:[1552.89,1616.36,1693.67,1701.29,1744.02,1737.77,1709.50,1736.99,1723,1745,1788.09],borderColor:'#7c3aed',tension:.3,pointRadius:3}
+    ]
+  },
+  options:{plugins:{legend:{position:'bottom'}},scales:{y:{title:{display:true,text:'收盘价'}}}}
+});
+
+// 半导体多空
+new Chart(document.getElementById('barSemi'), {
+  type:'bar',
+  data:{
+    labels:['景气周期向上','国产替代空间','存储涨价','大基金三期','估值历史高位','交易拥挤','海外宏观扰动','消费电子拖累'],
+    datasets:[
+      {label:'多头',data:[9,8,8,8,0,0,0,0],backgroundColor:'#16a34a'},
+      {label:'空头',data:[0,0,0,0,7,7,6,5],backgroundColor:'#dc2626'}
+    ]
+  },
+  options:{indexAxis:'y',plugins:{legend:{position:'bottom'}},scales:{x:{min:0,max:10}}}
+});
+
+// CPO多空
+new Chart(document.getElementById('barCpo'), {
+  type:'bar',
+  data:{
+    labels:['英伟达量产元年','1.6T缺口至28','渗透率3→35%','全球+400%','高位获利回吐','估值偏高','技术路线迭代','单一客户依赖'],
+    datasets:[
+      {label:'多头',data:[9,9,9,9,0,0,0,0],backgroundColor:'#16a34a'},
+      {label:'空头',data:[0,0,0,0,7,8,5,6],backgroundColor:'#dc2626'}
+    ]
+  },
+  options:{indexAxis:'y',plugins:{legend:{position:'bottom'}},scales:{x:{min:0,max:10}}}
+});
+
+// 风险三角
+new Chart(document.getElementById('riskChart'), {
+  type:'radar',
+  data:{
+    labels:['激进视角(上行)','中性视角(稳健)','保守视角(下行)'],
+    datasets:[
+      {label:'半导体',data:[8,7,6],fill:true,backgroundColor:'rgba(37,99,235,.15)',borderColor:'#2563eb'},
+      {label:'CPO/光通信',data:[9,7,5],fill:true,backgroundColor:'rgba(124,58,237,.15)',borderColor:'#7c3aed'}
+    ]
+  },
+  options:{scales:{r:{min:0,max:10,ticks:{stepSize:2}}},plugins:{legend:{position:'bottom'}}}
+});
+</script>
+</body>
+</html>
